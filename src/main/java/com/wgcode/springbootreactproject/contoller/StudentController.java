@@ -2,7 +2,6 @@ package com.wgcode.springbootreactproject.contoller;
 
 import com.wgcode.springbootreactproject.model.Students;
 import com.wgcode.springbootreactproject.service.IStudentService;
-import com.wgcode.springbootreactproject.service.StudentService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,8 +31,13 @@ public class StudentController {
         return iStudentService.updateStudent(students, id);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/delete/{id}")
     public void deleteStudent(@PathVariable Long id){
         iStudentService.deleteStudentById(id);
+    }
+
+    @GetMapping("/students/{id}")
+    public Students getById(@PathVariable Long id){
+        return iStudentService.getStudentById(id);
     }
 }
