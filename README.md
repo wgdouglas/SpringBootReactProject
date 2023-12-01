@@ -1,6 +1,6 @@
 > # SpringBootReactProject
 
-- This is a College admin portal application that allows for management of :
+**- This is a College admin portal application that allows for management of :**
     - Adding new students
     - Updating student identification information
     - Retrieving a complete list of students in the database
